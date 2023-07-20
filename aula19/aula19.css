@@ -1,0 +1,57 @@
+/* Layout Santo Graal */
+
+body {
+    background-color: brown;
+    margin: 0;
+    padding: 0;
+}
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        gap: 5px;
+    }
+
+header, footer {
+    text-align: center;
+    padding: 1%;
+    
+    background-color: burlywood;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+
+    .main, .sidebar, .ads {
+        background-color: burlywood;
+        text-align: center;
+        padding: 1%;
+    }
+
+    .sidebar, .ads {
+        flex-basis: 100px;
+    }
+
+    .main {
+        flex: 1;
+    }
+
+
+/* Responsividade */
+@media (min-width: 900px) {
+    
+    .content {
+        flex-direction: row;
+    }
+   
+    .sidebar {
+        order: -1;
+    }
+
+}
+
